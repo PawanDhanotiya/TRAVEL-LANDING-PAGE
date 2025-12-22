@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset (optional but safe) */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= HEADER ================= */
+header{
+    width: 80%;
+    height: 95vh;
+    margin: auto;
+}
+
+/* ================= NAV ================= */
+header nav{
+    width: 95%;
+    height: 7%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li{
+    padding: 3px 15px;
+}
+
+header nav ul li:nth-last-child(1){
+    background: black;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+header nav ul li:nth-last-child(1) a{
+    color: white;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+header nav ul li a:hover{
+    color: gray;
+}
+
+header nav .bi-three-dots{
+    display: none;
+}
+
+/* ================= CONTENT ================= */
+header .content{
+    position: relative;
+    width: 100%;
+    height: 93%;
+    z-index: 1;
+}
+
+/* Background image */
+header .content::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background: url('image/background-image1.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Text box */
+header .content .cont_bx{
+    width: 500px;
+    color: white;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+header .content .cont_bx h1{
+    line-height: 40px;
+    font-weight: 800;
+}
+
+header .content .cont_bx p{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(241,241,241);
+}
+
+header .content .cont_bx button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header .content .cont_bx button:hover{
+    background: rgb(113,113,113);
+}
+
+/* ================= TRIP SEARCH ================= */
+header .trip_bx{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    z-index: 3;
+}
+
+header .trip_bx .search_bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 10px 25px rgb(114,114,114);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 5; /* ⭐ MOST IMPORTANT FIX */
+}
+
+/* Cards */
+header .trip_bx .search_bx .card{
+    width: 200px;
+    height: 100%;
+}
+
+header .trip_bx .search_bx .card h4{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 700;
+    position: relative;
+}
+
+header .trip_bx .search_bx .card h4 .bi{
+    position: absolute;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+/* Inputs – NOW TYPEABLE */
+header .trip_bx .search_bx .card input{
+    margin-top: 3px;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: transparent;
+    color: black;
+    cursor: text;
+}
+
+/* ================= BUTTON ================= */
+header .trip_bx .search_bx input[type="button"]{
+    background: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+/* Hover */
+header .trip_bx .search_bx input[type="button"]:hover{
+    background: #00bcd4;
+    color: white;
+}
+
+/* Click */
+header .trip_bx .search_bx input[type="button"]:active{
+    background: #0097a7;
+    transform: scale(0.96);
+}
+header .trip_bx .travel_bx{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 30px;
+   
+    border-radius: 10px;
+    padding-bottom:20px;
+    box-shadow: 0px 20px 25px -10px rgb(165,165,165);
+}
+header .trip_bx .travel_bx::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(241,241,241,.7);
+    backdrop-filter: blur(5px);
+    z-index:-1;
+    
+}
+header .trip_bx .travel_bx h4{
+    margin: 0px;
+    padding: 60px 0px 15px 1.7%;
+
+}
+header .trip_bx .travel_bx .cards{
+   width: 95%;
+   height: auto;
+   margin: 0 auto;
+  
+}
+header .trip_bx .travel_bx .cards{
+   width: 95%;
+   height: auto;
+   margin: 0 auto;
+   
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+} 
+header .trip_bx .travel_bx .cards .card{
+   width: 220px;
+   height: 180px;
+   
+   
+}  
+header .trip_bx .travel_bx .cards .card h3{
+   margin: 0px 0px 10px 0px;
+   display: flex;
+   align-items: center;
+   font-weight: 600;
+   font-size: 16px;
+   
+
+}   
+header .trip_bx .travel_bx .cards .card h3 img{
+ width: 20px;
+ height: 20px;
+margin-left: 5px;
+
+}  
+header .trip_bx .travel_bx .cards .card  img{
+ width: 100%;
+ height: 50%;
+
+
+}   
+header .trip_bx .travel_bx .cards .card  .btn_city{
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+}
+header .trip_bx .travel_bx .cards .card  .btn_city a{
+
+text-decoration: none;
+background: black;
+color: white;
+border-radius: 20px;
+padding: 6px 20px;
+font-size: 11px;
+transition: .3s linear;
+}
+header .trip_bx .travel_bx .cards .card  .btn_city a:hover{
+background: gray;
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 15px;
+    
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5 span{
+    font-size: 13px;
+    
+}
+.offers{
+    width: 60%;
+    height: auto;
+    transition: .5s linear;
+    margin: auto;
+    margin-top: 100px;
+   
+
+}
+.offers h1{
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+.offers .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+   
+     flex-wrap: wrap;
+
+}
+.offers .cards .card{
+    position: relative;
+    width: 200px;
+    height: 350px;
+   
+    margin: 10px;
+}
+.offers .cards .card h3{
+    width: 140px;
+    padding: 6px 0px;
+   background: rgb(165,234,165);
+   border-radius: 20px;
+   font-size: 12px;
+   display: grid;
+   place-items: center;
+   margin: auto;
+   
+}
+.offers .cards .card .img_text{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+
+}
+.offers .cards .card .img_text h4{
+    position: absolute;
+    font-size: 9px;
+    padding: 10px 15px;
+    color: white;
+    bottom: 0;
+    margin: 0;
+    color: white;
+    z-index: 2;
+
+}
+.offers .cards .card .img_text h4::before{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(255,255,255,.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    
+}    
+.offers .cards .card .img_text img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+      
+}
+
+.offers .cards .card .cont_bx{
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid gray;
+}  
+
+
+
+
+
+
+.offers .cards .card .cont_bx .price , .dayes{
+    margin: 0px 8px;
+}
+.offers .cards .card .cont_bx .price .heart_chat{
+    display: flex;
+    align-items: center;
+
+}
+.offers .cards .card .cont_bx .price .heart_chat i:nth-child(1){
+    color: red;
+    font-size: 13px;
+    margin-right: 10px;
+    
+    
+}
+.offers .cards .card .cont_bx .price .heart_chat i span{
+    color: black;
+    font-size: 12px;
+   margin-left: 3px;
+    
+
+}
+.offers .cards .card .cont_bx .price .heart_chat i:nth-child(2){
+    color: rgb(112,196,229);
+    font-size: 13px;
+    margin-right: 10px;  
+}
+.offers .cards .card .cont_bx .price .info_price{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+
+}
+.offers .cards .card .cont_bx .price .info_price a{
+    text-decoration: none;
+    color: black;
+    font-size: 11px;
+    font-weight: 700;
+    transition: .3s linear;
+    margin-right: 13px;
+    
+}
+.offers .cards .card .cont_bx .price .info_price a:hover{ 
+    color: gray;
+}
+.offers .cards .card .cont_bx .price .info_price h4{
+   margin: 0;
+   font-size: 13px;
+}
+.offers .cards .card .cont_bx  .dayes{
+   color: white;
+  background: black;
+  font-size: 8px;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s linear;
+
+}
+.offers .cards .card .cont_bx  .dayes:hover{
+    transform: rotate(360deg);
+}
+.offers .cards .card .img_text{
+    position: relative;   /* ✅ anchor for lotus */
+    overflow: hidden;
+}
+.offers .cards .card .cont_bx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.offers .cards .card .img_text{
+    margin-bottom: 10px;   /* 👈 image aur niche ke content ke beech gap */
+}
+.offers .cards .card .cont_bx .dayes{
+    display: grid;
+    place-items: center;
+}
+.destination{
+    width: 80%;
+    margin: 120px auto;
+    display: flex;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.des_bx{
+    width: 45%;
+}
+
+.des_bx h2{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.des_bx .sub{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.des_bx ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.des_bx ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.des_bx .include{
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.des_bx button{
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.img_bx{
+    width: 55%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;          /* 🔥 MOST IMPORTANT */
+}
+
+.img_bx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* FLOATING CARDS */
+.msg{
+    position: absolute;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    width: 220px;
+}
+
+.msg img{
+    width: 35px;
+    height: 35px;
+}
+
+.msg .cont h4{
+    margin: 0;
+    font-size: 14px;
+}
+
+.msg .icon{
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+}
+
+.msg .icon i{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.msg .icon .bi-heart-fill{
+    color: red;
+}
+
+.msg .icon .bi-chat{
+    color: #6cb4ee;
+}
+
+/* POSITIONS — REFERENCE MATCH */
+.msg.india{
+    top: 12%;
+    right: 8%;
+}
+
+.msg.usa{
+    bottom: 18%;
+    left: 8%;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background: rgb(249,249,255);
+    margin-top: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+footer h2{
+  text-align: center;
+  margin: 0;
+  margin-top: 25px;
+  line-height: 30px;
+  font-weight: 600;
+
+}
+footer p{
+  text-align: center;
+  width: 400px;
+  font-size: 13px;
+
+
+}
+footer .input{
+    box-shadow: 0px 3px 20px -1px gray;
+    border-radius: 20px;
+
+}
+footer .input input{
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        border-radius: 20px 0px 0px 20px;
+         
+}
+footer .input button{
+        
+       padding: 10px 20px;
+       border: none;
+       outline: none;
+       font-size: 12px;
+       border-radius: 0px 20px 20px 0px; 
+       background: black;
+       color: white;
+       cursor: pointer;
+       transition: .3s linear;
+
+
+}
+footer .input button:hover{
+   background: gray;
+
+} 
+footer ul{
+    list-style: none;
+    display: flex;
+   /* align-items: center; */
+    margin-top: 30px;
+
+}
+footer ul li{
+    text-align: center;
+    margin-right: 30px;
+    font-weight: bold;
+
+}
+footer ul li h6{
+    font-size: 11px;
+    font-weight: 600;
+    max-width: 120px;
+    margin: 0;
+    line-height: 18px;
+    border-top: 1px solid black;
+    padding-top: 3px;
+
+
+}

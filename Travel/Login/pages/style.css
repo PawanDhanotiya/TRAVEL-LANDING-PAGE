@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f0f0f;
+}
+
+/* MAIN */
+.container{
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: #1c1c1c;
+    border: 2px solid #ff2770;
+    box-shadow: 0 0 25px #ff2770;
+    overflow: hidden;
+}
+
+/* CURVED SHAPE */
+.curved-shape{
+    position: absolute;
+    right: -250px;
+    top: -100px;
+    width: 800px;
+    height: 600px;
+    background: linear-gradient(45deg,#ff2770,#ff5e9c);
+    transform: rotate(10deg);
+}
+
+/* FORM BOX */
+.form-box{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .5s;
+}
+
+.form-box h2{
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* INPUT */
+.input-box{
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 30px 0 25px;
+}
+
+.input-box label{
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: .4s;
+}
+
+.input-box i{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+/* FLOAT */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+    top: -5px;
+    color: #ff2770;
+}
+
+/* BUTTON */
+.btn{
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(45deg,#ff2770,#ff5e9c);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* LINKS */
+.regi-link{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.regi-link a{
+    color: #ff2770;
+    text-decoration: none;
+}
+
+/* INFO */
+.info-content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* REGISTER HIDE */
+.register{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ACTIVE */
+.container.active .login{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container.active .register{
+    opacity: 1;
+    pointer-events: auto;
+}
